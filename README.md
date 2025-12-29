@@ -1,44 +1,30 @@
-# Jogo da Memória
+# Memory Game
 
-Bem-vindo ao Jogo da Memória! Este é um projeto desenvolvido em HTML, CSS e JavaScript, desafiando suas habilidades de memória e concentração. O objetivo é encontrar todos os pares de cartas correspondentes no menor tempo possível e com o menor número de movimentos.
+Welcome to the Memory Game! This project was developed using HTML, CSS, and JavaScript, challenging your memory and concentration skills. The goal is to find all matching card pairs in the shortest time possible and with the fewest moves.
 
 ![](images/screenshoot.jpg)
 
-## Funcionalidades
+## Features
 
-1. **Interface intuitiva**
+1. **Intuitive Interface**
 
-      A interface do jogo é simples e intuitiva, proporcionando uma experiência agradável.
+   The game features a clean and intuitive interface, providing a pleasant user experience.
 
-2. **Contador de movimentos**
+2. **Move Counter**
 
-      O jogo exibe um contador de movimentos para manter o controle de quantas jogadas foram feitas.
+   The game displays a move counter to track how many moves you have made.
 
-3. **Temporizador**
+3. **Timer**
 
-      Há também um temporizador que registra quanto tempo você leva para completar o jogo.
+   A timer records how long it takes you to complete the game.
 
-4. **Pause**
+4. **Pause Functionality**
 
-      Você pode pausar seu jogo e retornar assim que quiser.
+   You can pause the game at any time and resume whenever you want.
 
-## Como Jogar
+## How to Play
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/isabellatressino/jogo-da-memoria.git
-```
-
-2. Abra o arquivo `index.html` no navegador de sua preferência.
-
-    **ou**
-
-    Acesse o [Jogo da Memória Online](https://isabellatressino.github.io/jogo-da-memoria/) para experimentar diretamente no seu navegador.
-
-3. Jogue:
-- Clique em duas cartas para virá-las.
-- Se as cartas forem iguais, elas permanecerão viradas para cima. Caso contrário, elas serão viradas de volta após um breve momento.
-- Continue virando as cartas até encontrar todos os pares correspondentes.
-
-Divirta-se.
