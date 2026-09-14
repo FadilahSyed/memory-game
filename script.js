@@ -16,19 +16,13 @@ const timer = document.querySelector("#timer");
 
 // Variáveis e inicializações
 
-const animals = [
-  "bear",
-  "bee",
-  "coal",
-  "cow",
-  "dog",
-  "elephant",
-  "panda",
-  "pig",
-  "rex",
-  "sheep",
-  "unicorn",
-  "whale",
+const cardImages = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
 ];
 
 let card1 = "";
@@ -107,7 +101,7 @@ const revealCard = (card) => {
 };
 
 //Função que cria as cartas do jogo
-const createCards = (animal) => {
+const createCards = (image) => {
   const card = document.createElement("div");
   const divFront = document.createElement("div");
   const divBack = document.createElement("div");
@@ -115,9 +109,9 @@ const createCards = (animal) => {
   card.className = "card-container";
   divFront.className = "card front";
   divBack.className = "card back";
-  card.setAttribute("data-info", animal);
+  card.setAttribute("data-info", image);
 
-  divFront.style.backgroundImage = `url(images/${animal}.jpg)`;
+  divFront.style.backgroundImage = `url(images/cards/${image})`;
 
   card.appendChild(divFront);
   card.appendChild(divBack);
@@ -186,7 +180,7 @@ const initGame = (array) => {
 // Evento para o botão de jogar
 btnPlay.addEventListener("click", () => {
   sectionStart.style.display = "none";
-  initGame(animals);
+  initGame(cardImages);
 });
 
 // Eventos e funções da seção INFO
@@ -238,7 +232,7 @@ btnPlayAgain.addEventListener("click", () => {
   cards.forEach((card) => sectionCards.removeChild(card));
   sectionWin.style.display = "none";
 
-  initGame(animals);
+  initGame(cardImages);
   displayTimer(0, 0, timer);
   displayMoves(numMoves);
 });
