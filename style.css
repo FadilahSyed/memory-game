@@ -539,22 +539,17 @@ h2 {
 /* 2 3 4 6 8 12 */
 
 @media screen and (max-width: 480px) {
-
-  /* ---------- PAGE ---------- */
-
   html,
   body {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100%;
     overflow-x: hidden;
   }
 
   body {
-    grid-template-rows: auto 1fr;
+    display: block;
+    min-height: 100%;
   }
-
-
-  /* ---------- HEADER ---------- */
 
   header {
     width: 100%;
@@ -567,17 +562,15 @@ h2 {
 
     align-items: center;
 
-    padding: 16px 18px 14px;
-    row-gap: 16px;
+    padding: 14px 20px 16px;
+    row-gap: 14px;
 
-    height: auto;
+    background: var(--window-bg);
   }
 
   .logo {
     grid-area: logo;
-
     font-size: 2rem;
-    line-height: 1;
     white-space: nowrap;
   }
 
@@ -585,8 +578,8 @@ h2 {
     grid-area: icons;
 
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
 
     gap: 14px;
   }
@@ -604,92 +597,57 @@ h2 {
     justify-content: center;
     align-items: center;
 
-    gap: 22px;
+    gap: 24px;
 
     font-size: 1.8rem;
-    line-height: 1;
-
-    margin: 0;
   }
 
   #timer {
     width: auto;
   }
 
-
-  /* ---------- MAIN ---------- */
-
   main {
     width: 100%;
-    min-height: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    padding: 16px 0 30px;
+    display: block;
+    padding: 18px 0 30px;
   }
-
-
-  /* ---------- CARDS ---------- */
 
   .cards {
     display: grid;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 8px;
-
-    width: min(94vw, 440px);
+    width: calc(100vw - 36px);
+    max-width: 500px;
 
     margin: 0 auto;
+
+    gap: 8px;
     padding: 0;
 
-    justify-content: center;
-    align-content: start;
+    transform: scale(0);
   }
 
   .card-container {
     width: 100%;
-    min-width: 0;
-
     aspect-ratio: 3 / 4;
+    min-width: 0;
   }
 
-
-  /* ---------- POPUPS ---------- */
+  .card {
+    width: 100%;
+    height: 100%;
+  }
 
   .win,
   .info,
-  .pause {
-    width: 90vw;
-    max-width: 400px;
-
-    padding: 35px 20px;
-  }
-
-
-  /* ---------- START SCREEN ---------- */
-
+  .pause,
   .start {
-    width: 90vw;
+    width: calc(100vw - 36px);
     max-width: 420px;
 
-    padding: 30px 20px;
-  }
-
-  .start img {
-    width: min(40vw, 140px);
-  }
-
-  .start h1 {
-    font-size: 2.4rem;
-    text-align: center;
-  }
-
-  button {
-    font-size: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -699,7 +657,7 @@ h2 {
   }
 
   .cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     width: 94vw;
     gap: 12px;
   }
