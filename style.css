@@ -133,7 +133,7 @@ h2 {
 }
 
 .logo::before {
-  content: url(images/icon.png);
+  content: url(images/icon\ -\ Copy.png);
   vertical-align: middle;
   margin-right: 5px;
 }
@@ -605,4 +605,253 @@ h2 {
     max-height: 80vh;
     max-width: none;
   }
+}
+
+/* =========================================
+   RETRO / PIXEL COMPUTER THEME
+   ========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --background: #c4c5bf;
+  --window-bg: #c2b590;
+  --window-light: #ded4b8;
+  --window-dark: #4b4138;
+  --text: #171411;
+  --accent: #765c4f;
+}
+
+/* PAGE */
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Pixelify Sans", monospace;
+
+  min-height: 100dvh;
+}
+
+/* HEADER */
+
+header {
+  padding: 18px 25px;
+  border-bottom: 2px solid var(--window-dark);
+  background: var(--window-bg);
+}
+
+.logo,
+.temp,
+h1,
+h2,
+button,
+i {
+  font-family: "Pixelify Sans", monospace;
+}
+
+.logo {
+  color: var(--text);
+  font-size: 2rem;
+}
+
+.logo::before {
+  display: none;
+}
+
+.temp {
+  color: var(--text);
+}
+
+i {
+  color: var(--text);
+}
+
+i:hover {
+  color: var(--accent);
+}
+
+/* START SCREEN */
+
+.start {
+  background: var(--window-bg);
+
+  width: min(90vw, 520px);
+  padding: 40px;
+
+  border: 3px solid var(--window-dark);
+  border-radius: 0;
+
+  box-shadow:
+    6px 6px 0 #777770,
+    inset 3px 3px 0 var(--window-light);
+
+  gap: 25px;
+}
+
+.start img {
+  width: 120px;
+  image-rendering: pixelated;
+}
+
+.start h1 {
+  color: var(--text);
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* BUTTONS */
+
+button {
+  background: #b9ad98;
+  color: var(--text);
+
+  border: 3px solid var(--window-dark);
+  border-radius: 0;
+
+  padding: 12px 20px;
+  margin-top: 15px;
+
+  box-shadow:
+    inset 3px 3px 0 #e1d8c5,
+    inset -3px -3px 0 #776b5d;
+
+  font-size: 2rem;
+  letter-spacing: 3px;
+
+  transition: none;
+}
+
+button:hover {
+  background: #ccc0aa;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+
+  box-shadow:
+    inset 2px 2px 0 #776b5d,
+    inset -2px -2px 0 #e1d8c5;
+}
+
+/* REMOVE MODERN GRADIENT */
+
+.gradient:hover {
+  background: #ccc0aa;
+  animation: none;
+}
+
+/* CARDS */
+
+.card-container {
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  border-radius: 0;
+
+  box-shadow:
+    4px 4px 0 #777770;
+}
+
+.back {
+  background-color: #b7aa89;
+
+  border: 3px solid var(--window-dark);
+
+  border-radius: 0;
+
+  image-rendering: pixelated;
+}
+
+.front {
+  border: 3px solid var(--window-dark);
+  border-radius: 0;
+}
+
+/* INFO / PAUSE / WIN WINDOWS */
+
+.info,
+.pause,
+.win {
+  background: var(--window-bg);
+
+  border: 3px solid var(--window-dark);
+  border-radius: 0;
+
+  box-shadow:
+    7px 7px 0 #777770,
+    inset 3px 3px 0 var(--window-light);
+
+  color: var(--text);
+}
+
+.info h2,
+.pause h2,
+.win h2 {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.info p {
+  color: var(--text);
+}
+
+.info a {
+  color: #544234;
+}
+
+/* PIXEL EFFECT FOR GAME ART */
+
+.card img,
+.win img,
+.start img {
+  image-rendering: pixelated;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .start {
+    width: 88vw;
+    padding: 30px 20px;
+  }
+
+  .start h1 {
+    font-size: 2.4rem;
+  }
+
+  header {
+    padding: 15px;
+  }
+}
+
+.retro-titlebar {
+  width: calc(100% + 80px);
+  margin: -40px -40px 15px -40px;
+  padding: 7px 10px;
+
+  border-bottom: 3px solid var(--window-dark);
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Pixelify Sans", monospace;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      var(--accent) 0px,
+      var(--accent) 2px,
+      var(--window-bg) 2px,
+      var(--window-bg) 5px
+    );
+}
+
+.retro-titlebar span {
+  background: var(--window-bg);
+  padding: 0 6px;
 }
