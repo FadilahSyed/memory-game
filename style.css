@@ -214,8 +214,6 @@ h2 {
 
 /** section cards **/
 
-
-
 .cards {
   display: grid;
   grid-template-columns: repeat(6, 120px);
@@ -223,23 +221,31 @@ h2 {
   gap: 20px;
 
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-
   padding: 20px;
+
   transform: scale(0);
 }
 
 .card-container {
   position: relative;
+
   width: 120px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3/4;
 
   border-radius: 10px;
   cursor: pointer;
 
   transform-style: preserve-3d;
-  transition: transform 1.5s;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
 }
 
 .front {
@@ -373,7 +379,7 @@ h2 {
 .img-animation {
   /* chama a animação que faz a imagem crescer */
   transform: scale(0);
-  animation: grow 3s 0.5s forwards;
+  animation: grow 1s 0.1s forwards;
 }
 
 .title-animation {
@@ -381,14 +387,14 @@ h2 {
   opacity: 0;
   height: 0;
   overflow: hidden;
-  animation: appearTitle 2s 4s forwards;
+  animation: appearTitle 0.8s 0.8s forwards;
 }
 
 .opacity-animation {
   /* chama a animação que altera a opacidade */
   opacity: 0;
   cursor: default;
-  animation: opacity 3s 6s forwards;
+  animation: opacity 0.8s 1.4s forwards;
 }
 
 .jump-animation {

@@ -54,7 +54,7 @@ const checkEndGame = () => {
     iconPause.style.display = "none";
     setTimeout(() => {
       sectionWin.style.display = "grid";
-    }, 3000);
+    }, 1000);
     clearInterval(interval);
   }
 };
@@ -70,16 +70,16 @@ const compareCards = (c1, c2) => {
       card1 = "";
       card2 = "";
       checkEndGame();
-    }, 1500);
+    }, 700);
   } else {
     setTimeout(() => {
       c1.classList.remove("clicked");
       c2.classList.remove("clicked");
-    }, 2000);
+    }, 700);
     setTimeout(() => {
       card1 = "";
       card2 = "";
-    }, 1000);
+    }, 700);
   }
 
   numMoves++;
@@ -250,15 +250,15 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.disabled = true;
 
   setTimeout(() => {
-    img.classList.remove("grow-animation");
+    img.classList.remove("img-animation");
     h1.classList.remove("title-animation");
     btn.classList.remove("opacity-animation");
     header.classList.remove("opacity-animation");
     btn.disabled = false;
-  }, 7500);
+  }, 2300);
 
   setTimeout(() => {
     img.classList.add("jump-animation");
     btn.classList.add("gradient");
-  }, 9000);
+  }, 2500);
 });
