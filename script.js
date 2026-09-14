@@ -17,12 +17,12 @@ const timer = document.querySelector("#timer");
 // Variáveis e inicializações
 
 const cardImages = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "5.jpg",
-  "6.jpg",
+  "1.jpeg",
+  "2.jpeg",
+  "3.jpeg",
+  "4.jpeg",
+  "5.jpeg",
+  "6.jpeg",
 ];
 
 let card1 = "";
@@ -109,9 +109,10 @@ const createCards = (image) => {
   card.className = "card-container";
   divFront.className = "card front";
   divBack.className = "card back";
+
   card.setAttribute("data-info", image);
 
-  divFront.style.backgroundImage = `url(images/cards/${image})`;
+  divFront.style.backgroundImage = `url("images/${image}")`;
 
   card.appendChild(divFront);
   card.appendChild(divBack);
