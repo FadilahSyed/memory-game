@@ -112,7 +112,7 @@ const createCards = (image) => {
 
   card.setAttribute("data-info", image);
 
-  divFront.style.backgroundImage = `url("images/${image}")`;
+  divFront.style.backgroundImage = `url("./images/cards/${image}")`;
 
   card.appendChild(divFront);
   card.appendChild(divBack);
