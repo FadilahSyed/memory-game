@@ -118,7 +118,7 @@ h2 {
 }
 
 .logo::before {
-  content: url(images/brain-icon.png);
+  content: url(images/icon.png);
   vertical-align: middle;
   margin-right: 5px;
 }
@@ -255,7 +255,7 @@ h2 {
 }
 
 .back {
-  background: var(--soft-blue) url(images/brain.jpg) center center/contain
+  background: var(--soft-blue) url(images/icon.png) center center/contain
     no-repeat;
 
   border: 4px solid var(--purple);
