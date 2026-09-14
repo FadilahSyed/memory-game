@@ -25,6 +25,14 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
   font: 1.6rem var(--font);
@@ -62,6 +70,13 @@ section {
 
 img {
   width: 100%;
+}
+
+.game-container {
+  width: min(95vw, 1000px);
+  margin: 0 auto;
+  padding: clamp(10px, 3vw, 30px);
+  box-sizing: border-box;
 }
 
 button,
